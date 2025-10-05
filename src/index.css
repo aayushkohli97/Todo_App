@@ -1,0 +1,78 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 260 64% 74%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 35% 54%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 260 64% 74%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 260 64% 74%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gray-50 text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .material-card {
+    @apply bg-white rounded-lg shadow-material transition-shadow duration-300 hover:shadow-material-hover;
+  }
+  
+  .task-container {
+    @apply animate-slide-in;
+  }
+  
+  .material-input {
+    @apply w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-material-primary/30 focus:border-material-primary transition-all duration-200;
+  }
+  
+  .material-button {
+    @apply px-6 py-2 rounded-md shadow-material transition-all duration-200 hover:shadow-material-hover;
+  }
+  
+  .material-button-primary {
+    @apply material-button bg-material-primary text-white hover:bg-material-secondary;
+  }
+  
+  .material-button-secondary {
+    @apply material-button bg-white text-material-primary border border-material-primary;
+  }
+  
+  .material-button-danger {
+    @apply material-button bg-material-danger text-white hover:opacity-90;
+  }
+}
